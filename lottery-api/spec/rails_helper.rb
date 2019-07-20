@@ -1,4 +1,5 @@
 require 'database_cleaner'
+
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
@@ -60,6 +61,10 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
   # [...]
+
+  RSpec.configure do |config|
+    config.include FactoryBot::Syntax::Methods
+  end
   # configure shoulda matchers to use rspec as the test framework and full matcher libraries for rails
   Shoulda::Matchers.configure do |config|
     config.integrate do |with|
@@ -68,7 +73,6 @@ RSpec.configure do |config|
     end
   end
 
-  # [...]
   RSpec.configure do |config|
     # [...]
     # add `FactoryBot` methods

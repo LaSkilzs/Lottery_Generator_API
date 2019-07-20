@@ -3,8 +3,8 @@
 ## Purpose
 
 ## How to Use
-.. 1. run command - bundle install
-.. 2. run server -- rails s
+#### 1. run command - bundle install
+#### 2. run server -- rails s
 
 
 ## Endpoints

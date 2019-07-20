@@ -1,8 +1,8 @@
 class Lottery < ApplicationRecord
-  has_many :numbers
+  has_many :numbers, dependent: :destroy
+  validates_presence_of :name, :date
 
-  def self.drawing(type,date)
-    
+  def self.drawing(type,date)  
     winning_numbers = Array.new
     lotto = Lottery.create(name: type, date: date)
       while type > 0

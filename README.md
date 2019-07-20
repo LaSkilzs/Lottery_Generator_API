@@ -1,1 +1,1 @@
-# Lottery_Generator_API
+# Lottery Generator API
